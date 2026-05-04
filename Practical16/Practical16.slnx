@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="HelloWorldWebAPI.Services/HelloWorldWebAPI.Services.csproj" Id="5fee9bbb-41b1-487a-89e8-5cdf72c8a9e3" />
+  <Project Path="HelloWorldWebAPI/HelloWorldWebAPI.API.csproj" />
+</Solution>
