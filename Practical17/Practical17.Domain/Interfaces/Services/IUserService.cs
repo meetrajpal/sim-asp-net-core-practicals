@@ -1,6 +1,4 @@
-﻿using Practical17.Domain.DTOs.User;
-
-namespace Practical17.Domain.Interfaces.Services;
+﻿namespace Practical17.Domain.Interfaces.Services;
 
 public interface IUserService
 {

@@ -1,8 +1,4 @@
-﻿using Practical17.Domain.DTOs.Student;
-using Practical17.Domain.Interfaces;
-using Practical17.Domain.Interfaces.Repositories;
-
-namespace Practical17.Infrastructure.Services;
+﻿namespace Practical17.Infrastructure.Services;
 
 public class StudentService(IUnitOfWork unitOfWork) : IStudentService
 {

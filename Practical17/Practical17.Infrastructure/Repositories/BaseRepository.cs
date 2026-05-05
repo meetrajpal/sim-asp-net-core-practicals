@@ -1,7 +1,4 @@
-﻿using Practical17.Domain.Interfaces.Repositories;
-using Practical17.Infrastructure.Data;
-
-namespace Practical17.Infrastructure.Repositories;
+﻿namespace Practical17.Infrastructure.Repositories;
 
 public class BaseRepository<T>(ApplicationDbContext context) : IBaseRepository<T> where T : BaseEntity
 {

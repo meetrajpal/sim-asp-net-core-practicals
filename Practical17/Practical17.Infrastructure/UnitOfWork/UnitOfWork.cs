@@ -1,9 +1,4 @@
-﻿using Practical17.Domain.Interfaces;
-using Practical17.Domain.Interfaces.Repositories;
-using Practical17.Infrastructure.Data;
-using Practical17.Infrastructure.Repositories;
-
-namespace Practical17.Infrastructure.UnitOfWork;
+﻿namespace Practical17.Infrastructure.UnitOfWork;
 
 public class UnitOfWork(ApplicationDbContext context) : IUnitOfWork
 {

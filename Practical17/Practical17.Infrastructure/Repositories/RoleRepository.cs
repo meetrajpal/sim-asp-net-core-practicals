@@ -1,7 +1,4 @@
-﻿using Practical17.Domain.Interfaces.Repositories;
-using Practical17.Infrastructure.Data;
-
-namespace Practical17.Infrastructure.Repositories;
+﻿namespace Practical17.Infrastructure.Repositories;
 
 public class RoleRepository(ApplicationDbContext dbContext) : BaseRepository<Role>(dbContext), IRoleRepository
 {

@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace Practical17.Infrastructure.Data;
+﻿namespace Practical17.Infrastructure.Data;
 
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options)
 {

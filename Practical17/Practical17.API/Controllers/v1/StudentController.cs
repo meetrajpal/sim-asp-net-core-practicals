@@ -1,6 +1,4 @@
-﻿using Practical17.Domain.DTOs.Student;
-
-namespace Practical17.API.Controllers.v1;
+﻿namespace Practical17.API.Controllers.v1;
 
 [ApiController]
 [Route("api/v{version:apiVersion}/students")]
@@ -49,7 +47,7 @@ public class StudentController(IStudentService StudentService) : Controller
     }
 
     [HttpDelete("{id}")]
-
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> DeleteStudent(string id)
     {
         var result = await StudentService.DeleteStudent(Guid.Parse(id));

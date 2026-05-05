@@ -1,10 +1,4 @@
-﻿using Practical17.Domain.Interfaces;
-using Practical17.Domain.Interfaces.Repositories;
-using Practical17.Infrastructure.Repositories;
-using Practical17.Infrastructure.Services;
-using Practical17.Infrastructure.UnitOfWork;
-
-namespace Practical17.API.Extensions;
+﻿namespace Practical17.API.Extensions;
 
 public static class ServiceCollectionExtensions
 {

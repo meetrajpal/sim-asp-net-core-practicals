@@ -1,6 +1,4 @@
-﻿using Practical17.Domain.Interfaces.Repositories;
-
-namespace Practical17.Domain.Interfaces;
+﻿namespace Practical17.Domain.Interfaces;
 
 public interface IUnitOfWork : IDisposable
 {

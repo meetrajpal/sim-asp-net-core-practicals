@@ -1,6 +1,4 @@
-﻿using Practical17.Domain.DTOs.Student;
-
-namespace Practical17.Domain.Interfaces.Services;
+﻿namespace Practical17.Domain.Interfaces.Services;
 
 public interface IStudentService
 {
