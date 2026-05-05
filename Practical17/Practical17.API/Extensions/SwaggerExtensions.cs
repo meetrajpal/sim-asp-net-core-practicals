@@ -1,11 +1,8 @@
-﻿using Microsoft.OpenApi.Models;
-using Practical17.API.Filters;
-
-namespace Practical17.API.Extensions;
+﻿namespace Practical17.API.Extensions;
 
 public static class SwaggerExtensions
 {
-    public static IServiceCollection AddSwaggerExtention(this IServiceCollection services)
+    public static IServiceCollection AddSwaggerService(this IServiceCollection services)
     {
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen(options =>
@@ -14,7 +11,7 @@ public static class SwaggerExtensions
             {
                 Title = "Practical 17 API",
                 Version = "v1",
-                Description = "Practical 17 API with JWT Authentication"
+                Description = "Practical 17 API"
             });
 
             const string schemeId = "bearer";

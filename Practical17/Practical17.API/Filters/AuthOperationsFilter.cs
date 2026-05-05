@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.SwaggerGen;
-
-namespace Practical17.API.Filters;
+﻿namespace Practical17.API.Filters;
 
 public class AuthOperationFilter : IOperationFilter
 {

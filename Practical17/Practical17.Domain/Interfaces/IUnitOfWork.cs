@@ -1,0 +1,12 @@
+﻿using Practical17.Domain.Interfaces.Repositories;
+
+namespace Practical17.Domain.Interfaces;
+
+public interface IUnitOfWork : IDisposable
+{
+    IUserRepository UserRepo { get; }
+    IRoleRepository RoleRepo { get; }
+    IUserRoleRepository UserRoleRepo { get; }
+    IStudentRepository StudentRepo { get; }
+    Task<int> SaveChangesAsync();
+}

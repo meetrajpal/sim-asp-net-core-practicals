@@ -1,3 +1,8 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
   <Project Path="Practical17.API/Practical17.API.csproj" />
+  <Project Path="Practical17.Domain/Practical17.Domain.csproj" Id="a0c0d1c4-d405-4190-91f3-ca187c4b5f90" />
+  <Project Path="Practical17.Infrastructure/Practical17.Infrastructure.csproj" Id="02a1558b-feb8-4adf-b4b2-39339af5d80b" />
 </Solution>
