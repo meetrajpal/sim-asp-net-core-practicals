@@ -1,0 +1,9 @@
+﻿global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.IdentityModel.Tokens;
+global using Practical18.Domain.Models.Common;
+global using Practical18.Infrastructure.Data;
+global using Practical18.Web.Extensions;
+global using System.Net;
+global using System.Text;
+global using System.Text.Json;

@@ -1,6 +1,6 @@
-namespace Practical18.MVC.Models
+namespace Practical18.Domain.Models.ViewModels
 {
-    public class ErrorViewModel
+    internal class ErrorViewModel
     {
         public string? RequestId { get; set; }
 

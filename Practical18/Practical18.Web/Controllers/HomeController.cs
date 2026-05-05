@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Practical18.MVC.Models;
+using Practical18.Domain.Models.ViewModels;
 using System.Diagnostics;
 
-namespace Practical18.MVC.Controllers
+namespace Practical18.Web.Controllers
 {
     public class HomeController : Controller
     {
