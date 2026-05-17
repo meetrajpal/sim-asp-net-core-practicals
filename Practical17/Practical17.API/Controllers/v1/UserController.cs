@@ -26,4 +26,28 @@ public class UserController(IUserService userService) : Controller
         var result = await userService.GetByEmail(email);
         return Ok(result);
     }
+
+    [HttpPost]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> CreateUser([FromBody] UserRequestDto dto)
+    {
+        var result = await userService.CreateUser(dto);
+        return Ok(result);
+    }
+
+    [HttpPut("{id}")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> UpdateUser(string id, [FromBody] UserUpdateDto dto)
+    {
+        var result = await userService.UpdateUser(Guid.Parse(id), dto);
+        return Ok(result);
+    }
+
+    [HttpDelete("{id}")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> DeleteUser(string id)
+    {
+        var result = await userService.DeleteUser(Guid.Parse(id));
+        return Ok(result);
+    }
 }

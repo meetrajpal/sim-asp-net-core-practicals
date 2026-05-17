@@ -11,6 +11,7 @@ global using Practical17.API.Middlewares;
 global using Practical17.Domain.DTOs;
 global using Practical17.Domain.DTOs.Auth;
 global using Practical17.Domain.DTOs.Student;
+global using Practical17.Domain.DTOs.User;
 global using Practical17.Domain.Interfaces;
 global using Practical17.Domain.Interfaces.Repositories;
 global using Practical17.Domain.Interfaces.Services;

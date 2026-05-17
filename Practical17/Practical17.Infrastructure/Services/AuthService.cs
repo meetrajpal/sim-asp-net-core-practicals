@@ -16,12 +16,7 @@ public class AuthService(IUnitOfWork unitOfWork, ITokenService tokenService, IOp
             return ApiResponse<string>.Failure("Email is already registered.");
 
 
-        var user = new User
-        {
-            Email = dto.Email,
-            CreatedAt = DateTime.UtcNow,
-            PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password)
-        };
+        var user = new User() { FirstName = dto.FirstName, LastName = dto.LastName, Email = dto.Email, MobileNumber = dto.MobileNumber, CreatedAt = DateTime.UtcNow, PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password), IsActive = true };
 
         var role = await roleRepository.FindByRoleNameAsync("NormalUser");
         if (role == null)

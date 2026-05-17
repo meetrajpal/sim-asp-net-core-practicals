@@ -7,7 +7,7 @@ public class StudentController(IStudentService StudentService) : Controller
 {
 
     [HttpGet]
-    [Authorize(Roles = "Admin, NormalUser")]
+    [Authorize(Roles = "Admin, NormalStudent")]
     public async Task<IActionResult> GetAllStudents()
     {
         var result = await StudentService.GetAll();
@@ -15,7 +15,7 @@ public class StudentController(IStudentService StudentService) : Controller
     }
 
     [HttpGet("id/{StudentId}")]
-    [Authorize(Roles = "Admin, NormalUser")]
+    [Authorize(Roles = "Admin, NormalStudent")]
     public async Task<IActionResult> GetStudentById(string StudentId)
     {
         var result = await StudentService.GetById(StudentId);
@@ -23,7 +23,7 @@ public class StudentController(IStudentService StudentService) : Controller
     }
 
     [HttpGet("gr/{gr}")]
-    [Authorize(Roles = "Admin, NormalUser")]
+    [Authorize(Roles = "Admin, NormalStudent")]
     public async Task<IActionResult> GetStudentByGR(long gr)
     {
         var result = await StudentService.GetByGRNumber(gr);

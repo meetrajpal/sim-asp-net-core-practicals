@@ -9,10 +9,10 @@ public class TokenService(IOptions<JwtSettings> jwtSettings) : ITokenService
         var claims = new List<Claim>
         {
             new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new(JwtRegisteredClaimNames.Email, user.Email!),
+            new(JwtRegisteredClaimNames.Email, user.Email),
             new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             new(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new("Name", user.Name),
+            new("FirstName", user.FirstName),
         };
 
         foreach (var role in roles)
