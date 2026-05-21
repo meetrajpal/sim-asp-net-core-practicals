@@ -30,7 +30,7 @@ public class BaseRepository<T>(ApplicationDbContext context) : IBaseRepository<T
 
     public virtual async Task DeleteAsync(T entity)
     {
-        entity.IsActive = true;
+        entity.IsActive = false;
         entity.UpdatedAt = DateTime.UtcNow;
         _dbSet.Update(entity);
     }
