@@ -7,10 +7,6 @@
 
 ## Note
 
-* Task is implemented inside AuthController, StudentsController and UserController.
-* AutoMapper is used as for mapping each entity model to view model and vice versa per given in practical.
-* Logger is used inside global exception middleware.
-* Dependencies are wired correctly using Extention methods (place inside Practical18.MVC/Ententions directory) and those methods are called inside Program.cs file.
-* JWT Token is used for authorization.
-* Inside Student Controller only User with Admin Role can create, update and delete a Student entry and Normal user can only view students data that too after logging in.
-* Also Normal User can not access User Controller API endpoints, only Admin User can access them.
+* Task is implemented under Student Controller, Service, Repository and Views.
+* Auto Mapper bining profile class is inside Practical18.Infrastructure\Mappers directory and used inside the Student Service.  
+      

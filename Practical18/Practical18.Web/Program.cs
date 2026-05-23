@@ -6,6 +6,10 @@ builder.Services.AddDatabase(builder.Configuration);
 
 builder.Services.AddJwtAuthentication(builder.Configuration);
 
+builder.Services.AddAutoMapperExtension();
+
+builder.Services.AddProjectDependencies();
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

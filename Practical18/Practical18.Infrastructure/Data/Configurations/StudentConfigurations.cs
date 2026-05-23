@@ -13,6 +13,8 @@ public class StudentConfigurations : IEntityTypeConfiguration<Student>
         builder.Property(x => x.GRNumber).HasColumnType("decimal(10, 0)").IsRequired();
         builder.HasIndex(x => x.GRNumber).IsUnique().HasDatabaseName("IX_Unique_Student_GRNumber");
 
+        builder.Property(x => x.RowVersion).IsRowVersion();
+
         builder.Property(x => x.IsActive).HasDefaultValue(true);
 
         builder.Property(x => x.CreatedAt).HasDefaultValueSql("GETUTCDATE()");

@@ -1,3 +1,11 @@
-﻿global using Microsoft.EntityFrameworkCore;
+﻿global using AutoMapper;
+global using Microsoft.EntityFrameworkCore;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
 global using Practical18.Domain.Models.Entities;
+global using Practical18.Domain.Models.Interfaces;
+global using Practical18.Domain.Models.Interfaces.Repositories;
+global using Practical18.Domain.Models.Interfaces.Services;
+global using Practical18.Domain.Models.ViewModels;
+global using Practical18.Infrastructure.Data;
+global using Practical18.Infrastructure.Repositories;
+global using System.Reflection;

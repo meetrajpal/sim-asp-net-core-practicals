@@ -1,13 +1,12 @@
 ﻿@model Practical18.Domain.Models.Entities.Student
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Student Details";
 }
 
-<h1>Details</h1>
+<h1>Student Details</h1>
 
 <div>
-    <h4>Student</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -21,6 +20,12 @@
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.GRNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.DateOfBirth.ToString("dd-MM-yyyy")
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IsActive)
@@ -43,6 +48,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning me-2">Edit</a>
+    <a asp-action="Index" class="btn btn-primary">Home</a>
 </div>

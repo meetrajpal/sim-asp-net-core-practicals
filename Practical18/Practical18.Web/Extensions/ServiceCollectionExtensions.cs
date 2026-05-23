@@ -39,19 +39,25 @@ public static class ServiceCollectionExtensions
         return services;
     }
 
-    //public static IServiceCollection AddApplicationServices(this IServiceCollection services)
-    //{
+    public static IServiceCollection AddProjectDependencies(this IServiceCollection services)
+    {
+        services.AddScoped<IStudentService, StudentService>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-    //    services.AddScoped<IAuthService, AuthService>();
-    //    services.AddScoped<IUnitOfWork, UnitOfWork>();
-    //    services.AddScoped<IUserRepository, UserRepository>();
-    //    services.AddScoped<IRoleRepository, RoleRepository>();
-    //    services.AddScoped<IUserRoleRepository, UserRoleRepository>();
-    //    services.AddScoped<ITokenService, TokenService>();
-    //    services.AddScoped<IUserService, UserService>();
-    //    services.AddScoped<IStudentRepository, StudentRepository>();
-    //    services.AddScoped<IStudentService, StudentService>();
+        return services;
+    }
 
-    //    return services;
-    //}
+    public static IServiceCollection AddAutoMapperExtension(this IServiceCollection services)
+    {
+
+        services.AddAutoMapper(typeof(StudentMapper).Assembly);
+
+        return services;
+    }
+
+    public static IServiceCollection AddAppSettings(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
+        return services;
+    }
 }
