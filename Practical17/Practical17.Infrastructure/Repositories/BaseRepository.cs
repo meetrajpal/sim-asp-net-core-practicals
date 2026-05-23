@@ -23,16 +23,16 @@ public class BaseRepository<T>(ApplicationDbContext context) : IBaseRepository<T
         return entity;
     }
 
-    public virtual async Task UpdateAsync(T entity)
+    public virtual Task UpdateAsync(T entity)
     {
         _dbSet.Update(entity);
+	    return Task.CompletedTask;
     }
 
-    public virtual async Task DeleteAsync(T entity)
+    public virtual Task DeleteAsync(T entity)
     {
-        entity.IsActive = false;
-        entity.UpdatedAt = DateTime.UtcNow;
-        _dbSet.Update(entity);
+        entity.IsActive = false;        _dbSet.Update(entity);
+	    return Task.CompletedTask;
     }
 
     public virtual async Task<bool> ExistsAsync(Guid id)
