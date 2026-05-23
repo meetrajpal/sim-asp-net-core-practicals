@@ -1,7 +1,5 @@
-﻿global using Microsoft.AspNetCore.Authentication.JwtBearer;
-global using Microsoft.AspNetCore.Mvc;
+﻿global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
-global using Microsoft.IdentityModel.Tokens;
 global using Practical18.Domain.Models.Common;
 global using Practical18.Domain.Models.Interfaces;
 global using Practical18.Domain.Models.Interfaces.Services;
@@ -12,4 +10,3 @@ global using Practical18.Infrastructure.Services;
 global using Practical18.Infrastructure.UnitOfWork;
 global using Practical18.Web.Extensions;
 global using System.Diagnostics;
-global using System.Text;
