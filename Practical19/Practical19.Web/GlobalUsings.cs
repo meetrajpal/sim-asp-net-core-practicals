@@ -1,0 +1,17 @@
+﻿global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore;
+global using Practical19.Domain.Interfaces;
+global using Practical19.Domain.Interfaces.Services;
+global using Practical19.Domain.Models.Common;
+global using Practical19.Domain.Models.Entities;
+global using Practical19.Domain.Models.ViewModels;
+global using Practical19.Domain.Models.ViewModels.Auth;
+global using Practical19.Domain.Models.ViewModels.Student;
+global using Practical19.Infrastructure.Data;
+global using Practical19.Infrastructure.Mappers;
+global using Practical19.Infrastructure.Services;
+global using Practical19.Infrastructure.UnitOfWork;
+global using Practical19.Web.Extensions;
+global using System.Diagnostics;

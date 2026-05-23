@@ -1,0 +1,15 @@
+﻿global using AutoMapper;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Practical19.Domain.Interfaces;
+global using Practical19.Domain.Interfaces.Repositories;
+global using Practical19.Domain.Interfaces.Services;
+global using Practical19.Domain.Models.Entities;
+global using Practical19.Domain.Models.ViewModels.Auth;
+global using Practical19.Domain.Models.ViewModels.Student;
+global using Practical19.Infrastructure.Data;
+global using Practical19.Infrastructure.Repositories;
+global using System.Reflection;

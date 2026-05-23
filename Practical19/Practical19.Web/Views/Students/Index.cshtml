@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Practical19.Domain.Models.Entities.Student>
+
+@{
+    ViewData["Title"] = "Students List";
+}
+
+<h1>Student List</h1>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create" class="btn btn-primary">New</a>
+    </p>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GRNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GRNumber)
+                </td>
+                <td>
+                    @item.DateOfBirth.ToString("dd-MM-yyyy")
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">
+                            <i class="bi bi-eye-fill"></i>
+                    </a> 
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
+                            <i class="bi bi-pen-fill"></i>
+                        </a>
+                        <a class="btn btn-danger" onclick="openDelete('@item.Id')">
+                            <i class="bi bi-trash-fill"></i>
+                        </a>
+                    }
+                    </td>
+            </tr>
+    }
+    </tbody>
+</table>
+
+@Html.Partial("_StudentDeleteConfirmPartial")
+
+@section Scripts{
+    <script>
+            function openDelete(id) {
+                document.getElementById("deleteStudentBtn").href = `/Students/Delete/${id}`;
+                var modal = new bootstrap.Modal(document.getElementById("studentDeleteModal"));
+                modal.show();
+            }
+    </script>
+}
