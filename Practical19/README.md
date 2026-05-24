@@ -8,6 +8,7 @@
 ## Note
 
 * Task is implemented under Student Controller, Auth Controller, Service, Repository and Views.
+* Data annotations are applied on all model and view models.
 * The normal user can only view the Student list and details of particular student but can not create, edit or delete a new student record.
 * Admin user can perform all operations on student records.
 
