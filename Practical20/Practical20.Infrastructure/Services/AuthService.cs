@@ -64,6 +64,7 @@ public class AuthService(IUnitOfWork unitOfWork, ITokenService tokenService, IOp
         user.RefreshToken = refreshToken;
         user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(_jwtSettings.RefreshTokenExpiryDays);
         await userRepository.UpdateAsync(user);
+        await unitOfWork.SaveChangesAsync();
 
         var response = new AuthResponseDto
         {

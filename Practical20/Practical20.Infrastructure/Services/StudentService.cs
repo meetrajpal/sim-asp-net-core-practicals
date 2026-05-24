@@ -120,7 +120,9 @@ public class StudentService(IUnitOfWork unitOfWork, ILogger<StudentService> _log
             GRNumber = student.GRNumber,
             CreatedAt = student.CreatedAt,
             UpdatedAt = student.UpdatedAt,
-            IsActive = student.IsActive
+            IsActive = student.IsActive,
+            CreatedBy = student.CreatedBy,
+            UpdatedBy = student.UpdatedBy
         };
     }
 }
