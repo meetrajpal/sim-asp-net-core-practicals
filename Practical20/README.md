@@ -12,4 +12,3 @@
 * Generic repository is impletmented and Named as BaseRepository placed inside Practical20.Infrastructure/Repositories directory.
 * Unit of work is also implemented and placed inside Practical20.Infrastructure/UnitOfWork directory.
 * All functions are implemented as Asyncronous.
-* 
